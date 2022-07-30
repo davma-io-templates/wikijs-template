@@ -1,0 +1,120 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-instance-deployment
+  labels:
+    app: postgres-instance
+    project: postgres-instance-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres-instance
+  template:
+    metadata:
+      labels:
+        app: postgres-instance
+    spec:
+      containers:
+      - name: postgres-instance
+        image: postgres:11-alpine
+        ports:
+        - containerPort: 5432
+        env:
+        - name: POSTGRES_DB
+          value: wiki
+        - name: POSTGRES_PASSWORD
+          value: wikijsrocks
+        - name: POSTGRES_USER
+          value: wikijs
+        resources:
+          requests:
+            cpu: 200m
+            memory: 512Mi
+          limits:
+            cpu: 200m
+            memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: postgres-instance
+    project: postgres-instance-system
+  name: postgres-instance
+  namespace: default
+spec:
+  ports:
+  - port: 5432
+    protocol: TCP
+    targetPort: 5432
+  selector:
+    app: postgres-instance
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wikijs-instance-deployment
+  labels:
+    app: wikijs-instance
+    project: wikijs-instance-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wikijs-instance
+  template:
+    metadata:
+      labels:
+        app: wikijs-instance
+    spec:
+      containers:
+      - name: wikijs-instance
+        image: ghcr.io/requarks/wiki:2
+        ports:
+        - containerPort: 3000
+        env:
+        - name: DB_TYPE
+          value: postgres
+        - name: DB_HOST
+          value: postgres-instance
+        - name: DB_PORT
+          value: '5432'
+        - name: DB_USER
+          value: wikijs
+        - name: DB_PASS
+          value: wikijsrocks
+        - name: DB_NAME
+          value: wiki
+        resources:
+          requests:
+            cpu: 200m
+            memory: 512Mi
+          limits:
+            cpu: 200m
+            memory: 512Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: wikijs-instance
+    project: wikijs-instance-system
+  name: wikijs-instance
+  namespace: default
+spec:
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: wikijs-instance
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
