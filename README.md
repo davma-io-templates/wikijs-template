@@ -2,6 +2,8 @@
 
 Wiki.js - The most powerful and extensible open source Wiki software.
 
+[![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
+
 ## Requirements
 
 Need one of the following requirements to get started
