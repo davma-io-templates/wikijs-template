@@ -1,11 +1,12 @@
 apiVersion: core.napptive.com/v1alpha1
 kind: ApplicationMetadata
-name: "Wiki.jsPVC"
-version: 2.2
+name: "Wiki.js"
+version: 2.5
 description: "Wiki.js The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!""
 keywords:
   - "Wiki.js"
   - "Wiki"
+  - "Wiki.js Storage"
   - "davma.io"
 license: "AGPL-3.0 license"
 url: "https://js.wiki/"
