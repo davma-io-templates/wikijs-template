@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: davmaio-wikijs-dev
   annotations:
-    version: v1.0.0
+    version: '2.5.285'
     description: "Wiki.js The most powerful and extensible open source Wiki software. This deployment does not have storage volumes configured for data persistence. Deploy the prod version for production environments. "
 spec:
   components:

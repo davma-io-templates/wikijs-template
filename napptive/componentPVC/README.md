@@ -14,6 +14,8 @@ New versions of this application will only be provided once it has been verified
 
 For more info or help [contact](mailto:contact@davma.io)
 
+[![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
+
 ## References
 * https://js.wiki/
 * https://docs.requarks.io/

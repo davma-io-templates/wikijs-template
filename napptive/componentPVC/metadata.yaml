@@ -1,7 +1,7 @@
 apiVersion: core.napptive.com/v1alpha1
 kind: ApplicationMetadata
 name: "Wiki.js"
-version: 2.5
+version: 'storage'
 description: Wiki.js The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!
 keywords:
   - "Wiki.js"

@@ -3,7 +3,7 @@ kind: Application
 metadata:
   name: wikijs
   annotations:
-    version: v1.0.0
+    version: '2.5.285'
     description: "Wiki.js The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!"
 spec:
   components:
