@@ -1,13 +1,13 @@
 apiVersion: core.oam.dev/v1beta1
 kind: Application
 metadata:
-  name: davmaio-wikijs
+  name: davmaio-wikijs-dev
   annotations:
     version: v1.0.0
-    description: "Wiki.js The most powerful and extensible open source Wiki software. Make documentation a joy to write using Wiki.js's beautiful and intuitive interface!"
+    description: "Wiki.js The most powerful and extensible open source Wiki software. This deployment does not have storage volumes configured for data persistence. Deploy the prod version for production environments. "
 spec:
   components:
-  - name: davmaio-wikijs
+  - name: davmaio-wikijs-dev
     type: webservice
     properties:
       image: ghcr.io/requarks/wiki:2
@@ -64,7 +64,7 @@ spec:
               data:
                 password: Y2hhbmdldGhpcw==
   policies:
-  - name: davmaio-wikijs-health
+  - name: davmaio-wikijsdev-health
     type: health
     properties:
       probeInterval: 5
