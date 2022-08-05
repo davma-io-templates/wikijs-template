@@ -11,7 +11,7 @@ Wiki.js - The most powerful and extensible open source Wiki software.
 
  __This version of the application is designed for PRODUCTION ENVIRONMENTS__.  
 
-__ATTENTION Before performing the deployment you must deploy the storage component for data persistence with the STORAGE version__. For more info or help [contact](mailto:contact@davma.io).
+__ATTENTION Before performing the deployment you must deploy the storage component for data persistence with the STORAGE tag__. For more info or help [contact](mailto:contact@davma.io).
 
 It is not possible to deploy this version with a free Napptive account
 

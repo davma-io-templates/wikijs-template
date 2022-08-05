@@ -9,7 +9,7 @@ Wiki.js - The most powerful and extensible open source Wiki software.
 
 [![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
 
-This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the prod version for production environments__. For more info or help [contact](mailto:contact@davma.io).
+This application is for development only, it is strongly recommended not to use it in production environments. It is not deployed with data persistence. __Deploy the latest version for production environments__. For more info or help [contact](mailto:contact@davma.io).
 
 ## How to access to Wiki.js
 
