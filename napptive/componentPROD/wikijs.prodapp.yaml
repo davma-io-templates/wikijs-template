@@ -8,6 +8,8 @@ metadata:
 spec:
   components:
   - name: wikijs
+    dependsOn:
+      - postgres-instance
     type: webservice
     properties:
       image: ghcr.io/requarks/wiki:2
