@@ -6,17 +6,17 @@ metadata:
   name: wikijs-storage
 spec:
   components:
-    - name: db-data
+    - name: dbdata
       type: pvc
       properties:
         name: db-data
         accessMode: "ReadWriteOnce"
-    - name: wikijs-data
+    - name: wikijsdata
       type: pvc
       properties:
         name: wikijs-data
         accessMode: "ReadWriteOnce"
-    - name: wikijs-config
+    - name: wikijsconfig
       type: pvc
       properties:
         name: wikijs-config

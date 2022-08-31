@@ -3,7 +3,7 @@ kind: ComponentDefinition
 metadata:
   annotations:
     definition.oam.dev/description: Creates a PVC.
-  name: wikijs-data
+  name: wikijsdata
 spec:
   schematic:
     cue:

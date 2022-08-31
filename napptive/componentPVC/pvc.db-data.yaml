@@ -3,7 +3,7 @@ kind: ComponentDefinition
 metadata:
   annotations:
     definition.oam.dev/description: Creates a PVC.
-  name: db-data
+  name: dbdata
 spec:
   schematic:
     cue:
