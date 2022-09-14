@@ -1,4 +1,4 @@
-# davma.io Wiki.js
+# Wiki.js
 
 </br>
 
