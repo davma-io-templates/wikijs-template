@@ -1,25 +1,27 @@
-name: Update application to Napptive Playground
-on: [push]
-jobs:
-  deploy:
-    name: Upload new version to the catalog
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        include:
-          - base: 'app-test'
-            tag: 'DEV'
-          - base: 'latest'
-            tag: 'PROD'
-          - base: 'storage'
-            tag: 'PVC'
-    steps:
-      - uses: actions/checkout@v2
-      - uses: napptive-actions/catalog-push-action@v3.0.1
-        env:
-          PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
-        with:
-          applicationPath: ./napptive/component${{ matrix.tag }}/
-          namespace: "davma-io"
-          applicationName: "Wiki.js"
-          tag: "${{ matrix.base }}"
+# This repository is deprecated. You can find the latest versions for napptive playground in the following link: https://github.com/davma-io-templates/napptive-template
+
+# name: Update application to Napptive Playground
+# on: [push]
+# jobs:
+#   deploy:
+#     name: Upload new version to the catalog
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         include:
+#           - base: 'app-test'
+#             tag: 'DEV'
+#           - base: 'latest'
+#             tag: 'PROD'
+#           - base: 'storage'
+#             tag: 'PVC'
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: napptive-actions/catalog-push-action@v3.0.1
+#         env:
+#           PLAYGROUND_PAT: ${{ secrets.PLAYGROUND_PAT }}
+#         with:
+#           applicationPath: ./napptive/component${{ matrix.tag }}/
+#           namespace: "davma-io"
+#           applicationName: "Wiki.js"
+#           tag: "${{ matrix.base }}"
