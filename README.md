@@ -1,5 +1,7 @@
 # Wiki.js
 
+__This repository is deprecated. You can find the latest versions for napptive playground in the following link: [https://github.com/davma-io-templates/napptive-template](https://github.com/davma-io-templates/napptive-template)__
+
 Wiki.js - The most powerful and extensible open source Wiki software.
 
 [![Update application to Napptive Playground](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml/badge.svg)](https://github.com/davma-io-templates/wikijs-template/actions/workflows/napptive-push.yml)
